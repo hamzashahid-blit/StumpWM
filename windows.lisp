@@ -1,0 +1,28 @@
+(in-package :stumpwm)
+
+;; Starting Group
+(setf *input-window-gravity* :top
+      *message-window-gravity* :top
+      *window-border-style* :thin
+      *message-window-padding* 7
+      *message-window-y-padding* 7
+      *maxsize-border-width* 1
+      *normal-border-width* 1
+      *transient-border-width* 1
+      *float-window-border* 1
+      *float-window-title-height* 1
+      *suppress-frame-indicator* t      ; 'Current Frame' message
+      *mouse-focus-policy* :sloppy      ; Focus follows mouse
+      *float-window-modifier* :super)
+
+(when *initializing*
+  (grename "Main"))
+
+;; ;; Gaps
+(load-module "swm-gaps")
+(setf swm-gaps:*head-gaps-size* 0
+      swm-gaps:*inner-gaps-size* 3
+      swm-gaps:*outer-gaps-size* 10)
+
+(when *initializing*
+  (swm-gaps:toggle-gaps))
