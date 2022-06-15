@@ -4,11 +4,12 @@
 ;; TODO: Make an installation script that runs:
 ;; $ cd ~/quicklisp/local-projects/
 ;; $ git clone https://github.com/lihebi/clx-truetype.git
-;; TODOOOOO: Put under git
-;; TODOOOOO: Block everything on Namaz timings (+ 5 mins for azaan to finish)
-;; TODOOOO:  Remove gaps when there is no split. (or find a better solution?)
-;; TODOOO:   cpu & mem icons
-;; TODOO:    Don't kill process of emacs easily with 'd'
+;; TODOOOOOO: Make smart "gmove" (auto if only 2 groups; Don't list current group)
+;; TODOOOOO:  Block everything on Namaz timings (+ 5 mins for azaan to finish)
+;; TODOOOO:   Remove gaps when there is no split. (or find a better solution?)
+;; TODOOO:    cpu & mem icons
+;; DONE: Don't kill process of emacs easily with 'd'
+;; DONE: Put under git
 
 (in-package :stumpwm)
 (setf *default-package* :stumpwm)
@@ -43,5 +44,5 @@
 (load "~/.stumpwm.d/windows.lisp")
 (load "~/.stumpwm.d/modeline.lisp")
 (load "~/.stumpwm.d/custom.lisp")
-(load "~/.stumpwm.d/slynk.lisp")
 (load "~/.stumpwm.d/startup.lisp")
+(load "~/.stumpwm.d/slynk.lisp")

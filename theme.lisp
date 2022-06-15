@@ -30,27 +30,27 @@
 ;; (set-border-color "lightgreen")
 ;; (set-unfocus-color "darkgray")
 
-;;; Fonts
-(ql:quickload :clx-truetype)
-(xft:cache-fonts) ; Run once? or maybe every time? Check for cache?
-(load-module "ttf-fonts")
+;; Fonts
+(ql:quickload :truetype-clx)
+;; (load-module "ttf-fonts")
+;(xft:cache-fonts) ; Run once? or maybe every time? Check for cache?
 ;(clx-truetype:get-font-families) ;; DejaVu Sans, Book | mononoki, Regular
 
-(set-font `(,(make-instance 'xft:font
-                            :family "mononoki"
-                            :subfamily "Regular"
-                            :size 11
-                            :antialias t)
-            ;; ,(make-instance 'xft:font
-            ;;                 :family "DejaVu Sans Mono for Powerline"
-            ;;                 :subfamily "Book"
-            ;;                 :size 8.5
-            ;;                 :antialias t)
-            ,(make-instance 'xft:font
-                            :family "DejaVu Sans"
-                            :subfamily "Book"
-                            :size 8.5
-                            :antialias t)))
+;(set-font `(,(make-instance 'xft:font
+;                            :family "mononoki"
+;                            :subfamily "Regular"
+;                            :size 11
+;                            :antialias t)
+;            ;; ,(make-instance 'xft:font
+;            ;;                 :family "DejaVu Sans Mono for Powerline"
+;            ;;                 :subfamily "Book"
+;            ;;                 :size 8.5
+;            ;;                 :antialias t)
+;            ,(make-instance 'xft:font
+;                            :family "DejaVu Sans"
+;                            :subfamily "Book"
+;                            :size 8.5
+;                            :antialias t)))
 
 
 ;;; Pointer when Prefix key is pressed

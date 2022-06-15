@@ -64,8 +64,8 @@
 (undefine-key *root-map* (kbd "C-l")) ;; Old redisplay
 (define-key *root-map* (kbd "L") "redisplay")
 (undefine-key *root-map* (kbd "C-k")) ;; Old delete
-(define-key *root-map* (kbd "d") "kill")
-(define-key *root-map* (kbd "C-d") "delete")
+(define-key *root-map* (kbd "d") "delete")
+(define-key *root-map* (kbd "C-d") "kill")
 
 ;; (define-key *root-map* (kbd "C-h") "move-focus-left")
 (define-key *root-map* (kbd "C-j") "move-focus down")
