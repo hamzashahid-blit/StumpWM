@@ -62,3 +62,21 @@ Otherwise enter URL: "))
 Do you want to launch YouTube? "))
   (when bool
     (uiop:launch-program "firefox https://www.youtube.com")))
+
+(defcommand mpv-link (link)
+  ((:string "Enter Link: "))
+  (uiop:launch-program (format nil "mpv --ytdl-raw-options=format-sort='res:1080' ~a" link)))
+
+(defcommand mpv-clipboard () ()
+  (uiop:launch-program (format nil "mpv --ytdl-raw-options=format-sort='res:1080' ~a" (get-clipboard))))
+
+(defun get-clipboard ()
+  (with-output-to-string (out)
+	(let ((stream (uiop:process-info-output (uiop:launch-program "xclip -selection clipboard -o" :output :stream))))
+	  (loop :for c = (peek-char t stream nil nil)
+            :while c
+            :do (write-char (read-char stream) out)))))
+
+;; Reference to a command which sets up the environment for your current project
+;; (defcommand work () ()
+;;   (uiop:run-program "emacsclient -c -a ''"))

@@ -31,7 +31,7 @@
 ;; (set-unfocus-color "darkgray")
 
 ;; Fonts
-(ql:quickload :truetype-clx)
+;(ql:quickload :truetype-clx)
 ;; (load-module "ttf-fonts")
 ;(xft:cache-fonts) ; Run once? or maybe every time? Check for cache?
 ;(clx-truetype:get-font-families) ;; DejaVu Sans, Book | mononoki, Regular

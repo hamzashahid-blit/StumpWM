@@ -10,3 +10,5 @@
 
 (uiop:launch-program "emacsclient -c -a ''")
 (uiop:launch-program "firefox")
+(uiop:launch-program "element-desktop")
+(uiop:launch-program "keepassxc")
