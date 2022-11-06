@@ -9,7 +9,8 @@
 (define-key *root-map* (kbd "c") "launch kitty") ;; Terminal
 
 (define-key *root-map* (kbd "C-y") "mpv-clipboard")
-(define-key *root-map* (kbd "y") "mpv-youtube")
+(define-key *root-map* (kbd "y") "mpv-link")
+(define-key *root-map* (kbd "C-q") "kitty qalc")
 
 ;; ;; Replace "select-window" (C-') (for some reason showing as C->) with Rofi
 ;; (undefine-key *root-map* (kbd "C-'"))
