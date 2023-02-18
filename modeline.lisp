@@ -59,7 +59,7 @@ Except, it's in my format (Gruvbox colors)"
 (when *initializing*
   (mode-line))
 
-(setf (timer-repeat *mode-line-timer*) 1 ;; Refresh every second
-      *mode-line-timeout* 1)
+(setf (timer-repeat *mode-line-timer*) 0.5 ;; Refresh every second
+      *mode-line-timeout* 0.5)
 
 (update-all-mode-lines)

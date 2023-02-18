@@ -1,5 +1,7 @@
 (in-package :stumpwm)
 
+(defparameter *update-session-p* nil)
+
 (defcommand delete-window-and-frame () ()
   "Delete the current frame with it's window."
   (delete-window)
@@ -76,6 +78,17 @@ Do you want to launch YouTube? "))
 	  (loop :for c = (peek-char t stream nil nil)
             :while c
             :do (write-char (read-char stream) out)))))
+
+;; (defun update-session (window)
+;;   (when *update-session-p* 
+;;     (dump-desktop-to-file "~/.stumpwm.d/.mysession")))
+
+;; (add-hook *new-window-hook* 'update-session)
+
+;; (defcommand restore-session () ()
+;;   (restore-desktop (read-dump-from-file "~/.stumpwm.d/.mysession")))
+
+
 
 ;; Reference to a command which sets up the environment for your current project
 ;; (defcommand work () ()

@@ -20,7 +20,7 @@
 (when *initializing*
   (grename "Main")
   (gnew "Extra")
-  (gnew "Gamez")
+  (gnew "Work")
   (gselect "1"))
 
 ;;; Gaps [DISABLED]

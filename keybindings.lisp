@@ -10,7 +10,11 @@
 
 (define-key *root-map* (kbd "C-y") "mpv-clipboard")
 (define-key *root-map* (kbd "y") "mpv-link")
-(define-key *root-map* (kbd "C-q") "kitty qalc")
+(define-key *root-map* (kbd "C-q") "launch \"kitty qalc\"")
+(undefine-key *root-map* (kbd "x"))
+(define-key *root-map* (kbd "x") "launch \"scrot ~/pix/scrots/%y%b%d-%H:%M:%S.png\"")
+(define-key *root-map* (kbd "C-X") "launch \"scrot -s ~/pix/scrots/%y%b%d-%H:%M:%S.png\"")
+
 
 ;; ;; Replace "select-window" (C-') (for some reason showing as C->) with Rofi
 ;; (undefine-key *root-map* (kbd "C-'"))
@@ -22,7 +26,6 @@
 (define-key *root-map* (kbd "w") "launch \"rofi -show window\"")
 
 ;; Replace running programs with Rofi
-(undefine-key *root-map* (kbd "x"))
 (define-key *root-map* (kbd "C-f") "launch \"rofi -show run\"")
 (define-key *root-map* (kbd "C-x") *exchange-window-map*)
 (define-key *root-map* (kbd "C-M-f") "exec")
